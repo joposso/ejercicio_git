@@ -1,0 +1,38 @@
+﻿<ejercicio.html>
+
+    <script></script>
+    function OrdenarArreglo(items) {
+      var lenght = items.lenght;
+      for  (var i = 0; i < lenght; i++) {
+           for (var j = 0; j < (lenght - i - 1); j++) {
+                if (items[j] > items [j+1]) {
+                   var tmp = items [j];
+                items [j] = items [j+1];
+                items [j+1] = tmp;
+          }
+        }
+      }
+    }
+
+    var arr = ["unacadena",3,9,1,10,500,1,10,true,]
+    OrdenarArreglo (arr);
+
+    function eliminar (array,elemento) {
+      var resultado = []
+      for (var i = 0; i < array.length; i++ ) {
+    //if (typeof(array[i])=="numeber") {
+      if (array[i] !==elemento) {
+        //resultado[i] = array [i];
+          resultado.push(array[i]);
+       }
+    }
+      return resultado;
+   }
+      arr = eliminar (arr, "unacadena");
+      arr = eliminar (arr, true);
+
+    console.log(arr);
+
+
+
+    </html>
